@@ -15,11 +15,17 @@ def run_tests():
     assert not default_place.is_visited
 
     # Test initial-value place
-    print("Test initial-value place:")
-    new_place = Place("Malagar", "Spain", 1, False)
-    # TODO: Write tests to show this initialisation works
+    initial_place = Place("Zan", "Toyko", 1, True)
+    print(initial_place)
 
-    # TODO: Add more tests, as appropriate, for each method
+    # Test to change appropriate string from Bool
+    print(initial_place.get_visited_unvisited())
+
+    # Test to mark visited and unvisited place
+    print((initial_place.mark_visited_unvisited()))
+
+    # Print to see changes
+    print(initial_place)
 
 
 run_tests()

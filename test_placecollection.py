@@ -24,14 +24,34 @@ def run_tests():
     print(place_collection)
 
     # Test sorting places
+
+    print("Test sorting - name:")
+    place_collection.sort('name')
+    print(place_collection)
+
+    print("Test sorting - country")
+    place_collection.sort('country')
+    print(place_collection)
+
     print("Test sorting - priority:")
     place_collection.sort("priority")
     print(place_collection)
-    # TODO: Add more sorting tests
 
-    # TODO: Test saving places (check CSV file manually to see results)
+    print("Test sorting - visited")
+    place_collection.sort('is_visited')
+    print(place_collection)
 
-    # TODO: Add more tests, as appropriate, for each method
+    # Test saving places (check CSV file manually to see results)
+    print("Test saving places")
+    place_collection.save_places('places.csv')
+
+    # Test get number of visited places
+    print("Testing get number of visited places")
+    print("Number of places visited: {}".format(place_collection.get_number_visited_places()))
+
+    # Test get number of visited places
+    print("Testing get number of visited places")
+    print("Number of places unvisited: {}".format(place_collection.get_number_unvisited_places()))
 
 
 run_tests()
